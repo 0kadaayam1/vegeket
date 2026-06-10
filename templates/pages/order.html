@@ -97,7 +97,7 @@
                     {% for item in items %}
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
-                        <td><img src="{% static item.image %}" width="auto" height="100px"></td>
+                        <img src="/{{ object.image }}" width="100%" class="bg-white">
                         <td>{{ item.name }}</td>
                         <td>¥{{item.price}}</td>
                         <td>{{item.quantity}}</td>
