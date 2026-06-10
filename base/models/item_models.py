@@ -34,7 +34,7 @@ class Item(models.Model):
     is_published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    image = models.ImageField(default="", blank=True, upload_to=upload_image_to)
+    image = models.ImageField(upload_to='items/')
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     tags = models.ManyToManyField(Tag)
 
