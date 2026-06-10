@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block main %}
 
@@ -97,7 +98,7 @@
                     {% for item in items %}
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
-                        <td><img src="/{{item.image}}" width="auto" height="100px"></td>
+                        <td><img src="{% static item.image %}" width="auto" height="100px"></td>
                         <td>{{ item.name }}</td>
                         <td>¥{{item.price}}</td>
                         <td>{{item.quantity}}</td>
